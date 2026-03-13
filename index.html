@@ -1,36 +1,54 @@
+
 <!DOCTYPE html>
 <html>
 <body>
 
-<svg id="skewb" width="500" height="500" viewBox="-200 -200 500 500"></svg>
+<svg id="skewb" width="500" height="500" viewBox="-250 -250 500 500"></svg>
 
 <script>
+
+// ===== 定数 =====
 
 const COS60 = 0.5
 const SIN60 = 0.86602540378
 
-function iso(x,y){
- return [
-  x + COS60*y,
-  SIN60*y
- ]
+const COS30 = 0.86602540378
+const SIN30 = 0.5
+
+
+// ===== 変換 =====
+
+function transform(x,y){
+
+ // isometric変換
+ let X = x + COS60*y
+ let Y = SIN60*y
+
+ // 30°回転
+ let xr = X*COS30 - Y*SIN30
+ let yr = X*SIN30 + Y*COS30
+
+ return [xr,yr]
 }
+
+
+// ===== polygon描画 =====
 
 function poly(points,color){
 
- const svg=document.getElementById("skewb")
+ const svg = document.getElementById("skewb")
 
- const p=points.map(([x,y])=>{
-   const [X,Y]=iso(x,y)
-   return X+","+(-Y)
+ const pts = points.map(([x,y])=>{
+   const [X,Y] = transform(x,y)
+   return X + "," + (-Y)
  }).join(" ")
 
- const el=document.createElementNS(
+ const el = document.createElementNS(
    "http://www.w3.org/2000/svg",
    "polygon"
  )
 
- el.setAttribute("points",p)
+ el.setAttribute("points",pts)
  el.setAttribute("fill",color)
  el.setAttribute("stroke","black")
 
@@ -38,14 +56,21 @@ function poly(points,color){
 
 }
 
+
+// ===== 図形定義 =====
+
+// center
 poly([[0,100],[-100,0],[0,-100],[100,0]],"white")
 
+// triangles
 poly([[-100,100],[0,100],[-100,0]],"red")
 poly([[100,100],[0,100],[100,0]],"green")
 poly([[-100,-100],[0,-100],[-100,0]],"blue")
 poly([[100,-100],[0,-100],[100,0]],"orange")
 
+
 </script>
 
 </body>
 </html>
+
