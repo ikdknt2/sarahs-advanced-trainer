@@ -1,86 +1,31 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Skewb Trainer</title>
-<style>
-body{
-  font-family:sans-serif;
-  text-align:center;
-}
-
-svg{
-  background:#f5f5f5;
-}
-
-polygon{
-  stroke:black;
-  stroke-width:2;
-}
-</style>
-</head>
-
 <body>
 
-<h2>Skewb Trainer Prototype</h2>
+<svg width="220" height="220">
 
-<svg id="skewb" width="400" height="320">
+<!-- center diamond -->
+<polygon points="110,70 150,110 110,150 70,110"
+fill="white" stroke="black"/>
 
-<!-- U FACE -->
-<polygon id="U_center" points="170,70 200,70 200,100 170,100" fill="white"/>
-<polygon id="U_top" points="170,70 200,70 185,40" fill="white"/>
-<polygon id="U_bottom" points="170,100 200,100 185,130" fill="white"/>
-<polygon id="U_left" points="170,70 170,100 140,85" fill="white"/>
-<polygon id="U_right" points="200,70 200,100 230,85" fill="white"/>
+<!-- top triangle -->
+<polygon points="70,110 110,70 30,30"
+fill="red" stroke="black"/>
 
-<!-- F FACE -->
-<polygon id="F_center" points="190,150 220,150 220,180 190,180" fill="green"/>
-<polygon id="F_top" points="190,150 220,150 205,120" fill="green"/>
-<polygon id="F_bottom" points="190,180 220,180 205,210" fill="green"/>
-<polygon id="F_left" points="190,150 190,180 160,165" fill="green"/>
-<polygon id="F_right" points="220,150 220,180 250,165" fill="green"/>
+<!-- right triangle -->
+<polygon points="150,110 110,70 190,30"
+fill="green" stroke="black"/>
 
-<!-- R FACE -->
-<polygon id="R_center" points="270,150 300,150 300,180 270,180" fill="red"/>
-<polygon id="R_top" points="270,150 300,150 285,120" fill="red"/>
-<polygon id="R_bottom" points="270,180 300,180 285,210" fill="red"/>
-<polygon id="R_left" points="270,150 270,180 240,165" fill="red"/>
-<polygon id="R_right" points="300,150 300,180 330,165" fill="red"/>
+<!-- bottom triangle -->
+<polygon points="70,110 110,150 30,190"
+fill="blue" stroke="black"/>
+
+<!-- left triangle -->
+<polygon points="150,110 110,150 190,190"
+fill="orange" stroke="black"/>
 
 </svg>
 
-<br><br>
-
-<button onclick="randomize()">Random Colors</button>
-
-<script>
-
-function setColor(id,color){
- document.getElementById(id).setAttribute("fill",color)
-}
-
-function randomColor(){
- const colors=["white","yellow","red","orange","blue","green"]
- return colors[Math.floor(Math.random()*6)]
-}
-
-function randomize(){
-
- const stickers=[
- "U_center","U_top","U_bottom","U_left","U_right",
- "F_center","F_top","F_bottom","F_left","F_right",
- "R_center","R_top","R_bottom","R_left","R_right"
- ]
-
- stickers.forEach(id=>{
-  setColor(id,randomColor())
- })
-
-}
-
-</script>
-
 </body>
 </html>
-
