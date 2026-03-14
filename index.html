@@ -109,7 +109,7 @@ const tris=[
 
 function drawFace(color,rot){
 
- poly(center,color,rot)
+setTimeout(poly,1000, center,color,rot)
 
  for(let i=0;i<4;i++){
   poly(tris[i],color,rot)
