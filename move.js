@@ -50,7 +50,7 @@ function up(){
  do4cycle(2,23,26,11)
  do4cycle(3,24,27,12)
  do4cycle(0,20,25,10)
- do4cycle(1,21,29,14)
+ do4cycle(1,22,29,14)
  do4cycle(4,24,28,13)
  do4cycle(16,17,18,19)
 
