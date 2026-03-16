@@ -1,18 +1,69 @@
-
 <!DOCTYPE html>
 <html>
+
+<head>
+<meta charset="UTF-8">
+
+<style>
+
+body{
+ margin:0;
+ font-family:sans-serif;
+}
+
+.container{
+ display:flex;
+ height:100vh;
+}
+
+.left{
+ width:50%;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+}
+
+.right{
+ width:50%;
+ padding:20px;
+}
+
+.skewb{
+ border:1px solid #ccc;
+}
+
+</style>
+</head>
+
 <body>
 
 <div class="container">
-  <div class="left">
-    <svg id="skewb" width="600" height="600" viewBox="-300 -300 600 600"></svg>
-    HELLO WORLD!
-  </div>
 
-  <div class="right">
-    hello world!
-  </div>
+<div class="left">
+<svg class="skewb" width="600" height="600" viewBox="-300 -300 600 600"></svg>
+HELLO WORLD!
 </div>
+
+<div class="right">
+hello world!
+</div>
+
+</div>
+
+<script src="draw.js"></script>
+
+<script>
+
+const state=[
+ ...Array(5).fill("white"),
+ ...Array(5).fill("red"),
+ ...Array(5).fill("green")
+]
+
+draw(state)
+
+</script>
 
 </body>
 </html>
