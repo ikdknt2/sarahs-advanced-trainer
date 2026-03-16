@@ -32,6 +32,7 @@ body{
 }
 
 .buttons{
+ background:#ffe600;
  width:300px;
  display:flex;
 }
