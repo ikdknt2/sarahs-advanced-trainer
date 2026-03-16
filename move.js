@@ -11,6 +11,14 @@ function do3cycle(a,b,c){
  state[b]=temp
 }
 
+function do4cycle(a,b,c,d){
+ let temp=state[a]
+ state[a]=state[d]
+ state[d]=state[c]
+ state[c]=state[b]
+ state[b]=temp
+}
+
 function sledge(){
   //corners
   do3cycle(11,9,4)
@@ -36,3 +44,6 @@ function hedge(){
 
   draw(state)
 }
+
+function y(){
+ do4cycle()
