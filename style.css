@@ -1,13 +1,29 @@
+
+body{
+ margin:0;
+ font-family:sans-serif;
+}
+
 .container{
-  display:flex;
+ display:flex;
+ height:100vh;
 }
 
 .left{
-  width:50%;
-  background:#f0f0f0;
+ width:50%;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
 }
 
 .right{
-  width:50%;
-  background:#d0eaff;
+ width:50%;
+ padding:20px;
 }
+
+.skewb{
+ border:1px solid #ccc;
+}
+
+</style>
