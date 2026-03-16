@@ -1,17 +1,20 @@
-function do2cycle(a,b){
+function do22cycle(a,b,c,d){ //a↔b c↔b
  let temp=state[a]
  state[a]=state[b]
  state[b]=temp
+ temp=state[c]
+ state[c]=state[d]
+ state[d]=temp
 }
 
-function do3cycle(a,b,c){
+function do3cycle(a,b,c){　//a→b→c
  let temp=state[a]
  state[a]=state[c]
  state[c]=state[b]
  state[b]=temp
 }
 
-function do4cycle(a,b,c,d){
+function do4cycle(a,b,c,d){ //a→b→c→d
  let temp=state[a]
  state[a]=state[d]
  state[d]=state[c]
@@ -26,8 +29,7 @@ function sledge(){
   do3cycle(27,7,23)
   do3cycle(24,6,2)
   //centers
-  do2cycle(0,25)
-  do2cycle(10,5)
+  do22cycle(0,25,10,5)
 
   draw(state)
 }
@@ -39,8 +41,7 @@ function hedge(){
   do3cycle(23,7,27)
   do3cycle(2,6,24)
   //centers
-  do2cycle(0,25)
-  do2cycle(10,5)
+  do22cycle(0,25,10,5)
 
   draw(state)
 }
@@ -65,6 +66,18 @@ function down(){
  do4cycle(14,29,22,1)
  do4cycle(13,28,21,4)
  do4cycle(19,18,17,16)
+
+ draw(state)
+}
+
+function up2(){
+ do22cycle(9,7,8,6)
+ do22cycle(11,23,26,2)
+ do22cycle(12,24,27,3)
+ do22cycle(10,20,25,0)
+ do22cycle(14,22,29,1)
+ do22cycle(13,21,28,4)
+ do22cycle(19,18,17,16)
 
  draw(state)
 }
