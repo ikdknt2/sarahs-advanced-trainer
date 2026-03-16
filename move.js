@@ -57,3 +57,14 @@ function up(){
  draw(state)
 }
 
+function down(){
+ do4cycle(9,8,7,6)
+ do4cycle(11,26,23,2)
+ do4cycle(12,27,24,3) 
+ do4cycle(10,25,20,0)
+ do4cycle(19,29,22,1)
+ do4cycle(13,28,21,4)
+ do4cycle(19,18,17,16)
+
+ draw(state)
+}
