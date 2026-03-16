@@ -19,7 +19,7 @@ const pieces = [
 
  {name:"RFD", pts:[[0,-100],[0,-50],[25*SQRT3,-75]], idx:8},
 
- {name:"RFU", pts:[[0,0],[-25*SQRT3,25],[0,-50]], idx:9},
+ {name:"RFU", pts:[[0,0],[25*SQRT3,25],[0,-50]], idx:9},
 
  {name:"F", pts:[[-25*SQRT3,25],[0,-50],[-25*SQRT3,-75],[-50*SQRT3,0]], idx:10},
 
@@ -49,6 +49,8 @@ function poly(points,color,name,index){
  el.setAttribute("fill",color)
  el.setAttribute("class","piece "+name)
  el.setAttribute("data-index",index)
+el.setAttribute("stroke","black")
+el.setAttribute("stroke-width","2")
 
  svg.appendChild(el)
 }
