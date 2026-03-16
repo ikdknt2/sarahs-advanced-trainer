@@ -21,7 +21,7 @@ function do4cycle(a,b,c,d){
 
 function sledge(){
   //corners
-  do3cycle(11,9,4)
+  do3cycle(11,9,3)
   do3cycle(26,8,12)
   do3cycle(27,7,23)
   do3cycle(24,6,2)
@@ -34,7 +34,7 @@ function sledge(){
 
 function hedge(){
   //corners
-  do3cycle(4,9,11)
+  do3cycle(3,9,11)
   do3cycle(12,8,26)
   do3cycle(23,7,27)
   do3cycle(2,6,24)
