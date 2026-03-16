@@ -19,13 +19,13 @@ body{
 }
 
 .skewb{
- background:#191970;
+ background:#bdc6f0;
  border:1px solid #ccc;
 }
 
 .textbox{
  width:300px;
- background:#191970;
+ background:#bdc6f0;
  color:white;
  padding:10px;
  box-sizing:border-box;
