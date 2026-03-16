@@ -32,12 +32,12 @@ body{
 }
 
 .buttons{
- background:#ffe600;
  width:300px;
  display:flex;
 }
 
 .buttons button{
+ background:#ffe600;
  flex:1;
  padding:12px;
  font-size:18px;
