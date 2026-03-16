@@ -3,7 +3,7 @@ const SQRT3 = Math.sqrt(3);
 const pieces = [
  {name:"U", pts:[[-25*SQRT3,75],[25*SQRT3,75],[25*SQRT3,25],[-25*SQRT3,25]], idx:0},
 
- {name:"UBL", pts:[[0,100],[25*Math.sqrt(5),75],[-25*SQRT3,75]], idx:1},
+ {name:"UBL", pts:[[0,100],[25*SQRT3,75],[-25*SQRT3,75]], idx:1},
 
  {name:"UBR", pts:[[50*SQRT3,50],[25*SQRT3,75],[25*SQRT3,25]], idx:2},
 
