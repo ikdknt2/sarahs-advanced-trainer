@@ -1,4 +1,3 @@
-
 body{
  margin:0;
  font-family:sans-serif;
@@ -6,7 +5,6 @@ body{
 
 .container{
  display:flex;
- height:100vh;
 }
 
 .left{
@@ -14,17 +12,34 @@ body{
  display:flex;
  flex-direction:column;
  align-items:center;
- justify-content:center;
 }
 
 .right{
  width:50%;
- padding:20px;
 }
 
 .skewb{
+ background:#eeeeee;
  border:1px solid #ccc;
- background:#191970;
 }
 
-</style>
+.textbox{
+ width:600px;
+ background:#191970;
+ color:white;
+ padding:10px;
+ box-sizing:border-box;
+}
+
+.buttons{
+ width:600px;
+ display:flex;
+}
+
+.buttons button{
+ flex:1;
+ padding:12px;
+ font-size:18px;
+ border:1px solid black;
+ cursor:pointer;
+}
