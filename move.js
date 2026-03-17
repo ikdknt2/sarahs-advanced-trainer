@@ -81,3 +81,15 @@ function up2(){
 
  draw(state)
 }
+
+function up(){
+ do4cycle(11,12,13,14)
+ do4cycle(0,5,25,15)
+ do4cycle(1,6,27,16)
+ do4cycle(2,7,28,19)
+ do4cycle(3,8,29,16)
+ do4cycle(4,9,26,17)
+ do4cycle(21,22,23,24)
+
+ draw(state)
+}
