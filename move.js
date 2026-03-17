@@ -85,7 +85,7 @@ function up2(){
 function cw(){
  do4cycle(11,12,13,14)
  do4cycle(0,5,25,15)
- do4cycle(1,6,27,16)
+ do4cycle(1,6,27,18)
  do4cycle(2,7,28,19)
  do4cycle(3,8,29,16)
  do4cycle(4,9,26,17)
@@ -97,7 +97,7 @@ function cw(){
 function ccw(){
  do4cycle(14,13,12,11)
  do4cycle(15,25,5,0)
- do4cycle(16,27,6,1)
+ do4cycle(18,27,6,1)
  do4cycle(19,28,7,2)
  do4cycle(16,29,8,3)
  do4cycle(17,26,9,4)
