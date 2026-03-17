@@ -109,10 +109,10 @@ function ccw(){
 function cw2(){
  do22cycle(11,13,12,14)
  do22cycle(0,25,5,15)
- do22cycle(1,27,6,16)
+ do22cycle(1,27,6,18)
  do22cycle(2,28,7,19)
  do22cycle(3,29,8,16)
- do22cycle(4,26,9.17)
+ do22cycle(4,26,9,17)
  do22cycle(21,23,22,24)
 
  draw(state)
