@@ -82,7 +82,7 @@ function up2(){
  draw(state)
 }
 
-function up(){
+function cw(){
  do4cycle(11,12,13,14)
  do4cycle(0,5,25,15)
  do4cycle(1,6,27,16)
@@ -90,6 +90,30 @@ function up(){
  do4cycle(3,8,29,16)
  do4cycle(4,9,26,17)
  do4cycle(21,22,23,24)
+
+ draw(state)
+}
+
+function ccw(){
+ do4cycle(14,13,12,11)
+ do4cycle(15,25,5,0)
+ do4cycle(16,27,6,1)
+ do4cycle(19,28,7,2)
+ do4cycle(16,29,8,3)
+ do4cycle(17,26,9,4)
+ do4cycle(24,23,22,21)
+
+ draw(state)
+}
+
+function cw2(){
+ do22cycle(11,13,12,14)
+ do22cycle(0,25,5,15)
+ do22cycle(1,27,6,16)
+ do22cycle(2,28,7,19)
+ do22cycle(3,29,8,16)
+ do22cycle(4,26,9.17)
+ do22cycle(21,23,22,24)
 
  draw(state)
 }
