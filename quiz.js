@@ -3,12 +3,12 @@ let problemList = [];
 
 // 色対応
 const colorMap = {
-  "0":"white",
-  "1":"green",
-  "2":"red",
-  "3":"yellow",
-  "4":"blue",
-  "5":"orange"
+  "W":"white",
+  "G":"green",
+  "R":"red",
+  "Y":"yellow",
+  "B":"blue",
+  "O":"orange"
 };
 
 // =====================
