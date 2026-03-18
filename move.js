@@ -117,3 +117,39 @@ function cw2(){
 
  draw(state)
 }
+
+function left(){
+ do4cycle(1,4,3,2)
+ do4cycle(5,10,20,15)
+ do4cycle(6,11,21,16) 
+ do4cycle(7,12,22,17)
+ do4cycle(8,13,23,18)
+ do4cycle(9,14,24,19)
+ do4cycle(26,27,28,29)
+
+ draw(state)
+}
+
+function right(){
+ do4cycle(2,3,4,1)
+ do4cycle(15,20,10,5)
+ do4cycle(16,21,11,6) 
+ do4cycle(17,22,12,7)
+ do4cycle(18,23,13,8)
+ do4cycle(19,24,14,9)
+ do4cycle(29,28,27,26)
+
+ draw(state)
+}
+
+function left2 (){
+ do22cycle(1,3,4,2)
+ do22cycle(5,20,10,15)
+ do22cycle(6,21,11,16) 
+ do22cycle(7,22,12,17)
+ do22cycle(8,23,13,18)
+ do22cycle(9,24,14,19)
+ do22cycle(26,28,27,29)
+
+ draw(state)
+}
