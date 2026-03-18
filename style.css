@@ -86,5 +86,6 @@ body{
 }
 
 .skewb .textbox .button{
-  align-items:stretch;
+ align-items:center;
+ display:block;;
 }
