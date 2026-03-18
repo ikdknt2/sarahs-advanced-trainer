@@ -21,6 +21,8 @@ body{
 .skewb{
  background:#d9d9d9;
  border:1px solid #ccc;
+ margin:0 auto;
+ display:block;
 }
 
 .textbox{
