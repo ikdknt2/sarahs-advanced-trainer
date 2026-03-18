@@ -37,7 +37,7 @@ async function loadCSV(){
 // =====================
 // 問題生成
 // =====================
-function generateProblems(){
+function generateProblem(){
   const selected = [];
 
   if(document.getElementById("PiS").checked) selected.push("PiS");
