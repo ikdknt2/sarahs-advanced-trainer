@@ -89,7 +89,8 @@ function cw(){
  do4cycle(2,7,28,19)
  do4cycle(3,8,29,16)
  do4cycle(4,9,26,17)
- do4cycle(21,22,23,24)
+ do4cycle(24,23,22,21)
+ 
 
  draw(state)
 }
@@ -101,8 +102,7 @@ function ccw(){
  do4cycle(19,28,7,2)
  do4cycle(16,29,8,3)
  do4cycle(17,26,9,4)
- do4cycle(24,23,22,21)
-
+ do4cycle(21,22,23,24)
  draw(state)
 }
 
