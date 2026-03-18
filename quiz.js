@@ -1,16 +1,20 @@
-// 全ケース
 let allCases = [];
-
-// 問題リスト
 let problemList = [];
+let state = []; // ←唯一のstate（色配列）
 
-// 現在のstate（配列で統一）
-let currentState = null;
+// 色対応
+const colorMap = {
+  "0":"white",
+  "1":"green",
+  "2":"red",
+  "3":"yellow",
+  "4":"blue",
+  "5":"orange"
+};
 
-
-// =========================
-// CSV読み込み（配列に変換）
-// =========================
+// =====================
+// CSV読み込み
+// =====================
 async function loadCSV(){
   const res = await fetch("cases.csv");
   const text = await res.text();
@@ -20,28 +24,20 @@ async function loadCSV(){
   allCases = lines.map(line=>{
     const [type, name, stateStr] = line.split(",");
 
-    // ★ここで配列に変換
-    const state = stateStr.trim().split("");
-
-    // 安全チェック
-    if(state.length !== 30){
-      console.warn("state長さおかしい:", stateStr);
-    }
-
     return {
       type: type.trim(),
       name: name.trim(),
-      state: state   // ←配列で保存！
+      // 色配列に変換
+      state: stateStr.trim().split("").map(n => colorMap[n])
     };
   });
 
-  console.log("CSV loaded:", allCases);
+  console.log("CSV loaded:", allCases.length);
 }
 
-
-// =========================
-// 問題リスト生成
-// =========================
+// =====================
+// 問題生成
+// =====================
 function generateProblems(){
   const selected = [];
 
@@ -58,13 +54,12 @@ function generateProblems(){
 
   problemList = allCases.filter(c => selected.includes(c.type));
 
-  console.log("Problem List:", problemList);
+  console.log("Problems:", problemList.length);
 }
 
-
-// =========================
-// 次の問題（配列stateをそのまま使う）
-// =========================
+// =====================
+// 次の問題
+// =====================
 function nextProblem(){
   if(problemList.length === 0){
     alert("問題がありません");
@@ -74,10 +69,7 @@ function nextProblem(){
   const i = Math.floor(Math.random() * problemList.length);
   const picked = problemList[i];
 
-  // ★ここ重要：コピーして使う（元データ破壊防止）
-  currentState = [...picked.state];
+  state = [...picked.state]; // ←色配列コピー
 
-  console.log("Current:", picked.name);
-
-  draw(currentState); // ←配列そのまま渡す
+  draw(state);
 }
