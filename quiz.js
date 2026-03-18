@@ -1,6 +1,5 @@
 let allCases = [];
 let problemList = [];
-let state = []; // ←唯一のstate（色配列）
 
 // 色対応
 const colorMap = {
