@@ -28,7 +28,8 @@ body{
 .textbox{
  width:300px;
  background:#d9d9d9;
- color:white;
+ color:Black;
+ font-weight: bold; 
  padding:10px;
  box-sizing:border-box;
 }
