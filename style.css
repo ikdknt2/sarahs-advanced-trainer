@@ -84,3 +84,7 @@ body{
  border-radius:6px;
  cursor:pointer;
 }
+
+.skewb .textbox .button{
+  align-items:stretch;
+}
