@@ -1,3 +1,5 @@
+let log = 0
+
 function do22cycle(a,b,c,d){ //a↔b c↔b
  let temp=state[a]
  state[a]=state[b]
@@ -32,6 +34,8 @@ function sledge(){
   do22cycle(0,25,10,5)
 
   draw(state)
+
+  log = log + "S"
 }
 
 function hedge(){
@@ -44,6 +48,7 @@ function hedge(){
   do22cycle(0,25,10,5)
 
   draw(state)
+ log = log + "H"
 }
 
 function up(){
@@ -56,6 +61,7 @@ function up(){
  do4cycle(16,17,18,19)
 
  draw(state)
+ log = log + "↑"
 }
 
 function down(){
@@ -68,6 +74,7 @@ do4cycle(8,28,21,4)
 do4cycle(19,18,17,16)
  
  draw(state)
+ log = log + "↓"
 }
 
 function up2(){
@@ -80,6 +87,7 @@ do22cycle(4,28,21,8)
 do22cycle(16,18,17,19)
 
  draw(state)
+ log = log + "↑2"
 }
 
 function cw(){
@@ -92,6 +100,7 @@ function cw(){
  do4cycle(24,23,22,21)
  
  draw(state)
+ log = log + "↷"
 }
 
 function ccw(){
@@ -104,6 +113,7 @@ do4cycle(17,26,14,4)
 do4cycle(21,22,23,24)
  
  draw(state)
+ log = log + "↶"
 }
 
 function cw2(){
@@ -116,6 +126,7 @@ do22cycle(4,26,14,17)
 do22cycle(24,22,23,21)
 
  draw(state)
+ log = log + "↷2"
 }
 
 function left(){
@@ -128,6 +139,7 @@ function left(){
  do4cycle(26,27,28,29)
 
  draw(state)
+ log = log + "←"
 }
 
 function right(){
@@ -140,6 +152,7 @@ do4cycle(14,24,19,9)
 do4cycle(29,28,27,26)
 
  draw(state)
+ log = log + "→"
 }
 
 function left2 (){
