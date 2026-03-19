@@ -50,6 +50,17 @@ function generateProblem(){
   if(document.getElementById("PiVU").checked) selected.push("PiVU");
   if(document.getElementById("PiHZ").checked) selected.push("PiHZ");
   if(document.getElementById("PiSk").checked) selected.push("PiSk");
+  if(document.getElementById("PnS").checked) selected.push("PnS");
+  if(document.getElementById("PnW").checked) selected.push("PnW");
+  if(document.getElementById("PnX").checked) selected.push("PnX");
+  if(document.getElementById("PnO").checked) selected.push("PnO");
+  if(document.getElementById("PnZC").checked) selected.push("PnZC");
+  if(document.getElementById("Pn3S").checked) selected.push("Pn3S");
+  if(document.getElementById("PnHU").checked) selected.push("PnHU");
+  if(document.getElementById("PnVU").checked) selected.push("PnVU");
+  if(document.getElementById("PnHZ").checked) selected.push("PnHZ");
+  if(document.getElementById("PnSk").checked) selected.push("PnSk");
+
 
   problemList = allCases.filter(c => selected.includes(c.type));
 
