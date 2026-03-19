@@ -77,7 +77,7 @@ function up2(){
  do22cycle(10,20,25,0)
  do22cycle(14,22,29,1)
  do22cycle(13,21,28,4)
- do22cycle(19,18,17,16)
+ do22cycle(19,17,18,16)
 
  draw(state)
 }
