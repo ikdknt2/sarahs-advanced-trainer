@@ -24,10 +24,10 @@ function do4cycle(a,b,c,d){ //a→b→c→d
 
 function sledge(){
   //corners
-  do3cycle(11,9,3)
-  do3cycle(26,8,12)
-  do3cycle(27,7,23)
-  do3cycle(24,6,2)
+  do3cycle(6,14,3)
+  do3cycle(26,13,7)
+  do3cycle(27,12,23)
+  do3cycle(24,11,2)
   //centers
   do22cycle(0,25,10,5)
 
@@ -36,10 +36,10 @@ function sledge(){
 
 function hedge(){
   //corners
-  do3cycle(3,9,11)
-  do3cycle(12,8,26)
-  do3cycle(23,7,27)
-  do3cycle(2,6,24)
+  do3cycle(3,14,6)
+  do3cycle(7,13,26)
+  do3cycle(23,12,27)
+  do3cycle(2,11,24)
   //centers
   do22cycle(0,25,10,5)
 
@@ -47,109 +47,109 @@ function hedge(){
 }
 
 function up(){
- do4cycle(6,7,8,9)
- do4cycle(2,23,26,11)
- do4cycle(3,24,27,12)
+ do4cycle(11,12,13,14)
+ do4cycle(2,23,26,6)
+ do4cycle(3,24,27,7)
  do4cycle(0,20,25,10)
- do4cycle(1,22,29,14)
- do4cycle(4,21,28,13)
+ do4cycle(1,22,29,9)
+ do4cycle(4,21,28,8)
  do4cycle(16,17,18,19)
 
  draw(state)
 }
 
 function down(){
- do4cycle(9,8,7,6)
- do4cycle(11,26,23,2)
- do4cycle(12,27,24,3) 
- do4cycle(10,25,20,0)
- do4cycle(14,29,22,1)
- do4cycle(13,28,21,4)
- do4cycle(19,18,17,16)
-
+do4cycle(14,13,12,11)
+do4cycle(6,26,23,2)
+do4cycle(7,27,24,3)
+do4cycle(10,25,20,0)
+do4cycle(9,29,22,1)
+do4cycle(8,28,21,4)
+do4cycle(19,18,17,16)
+ 
  draw(state)
 }
 
 function up2(){
- do22cycle(9,7,8,6)
- do22cycle(11,23,26,2)
- do22cycle(12,24,27,3)
- do22cycle(10,20,25,0)
- do22cycle(14,22,29,1)
- do22cycle(13,21,28,4)
- do22cycle(19,17,18,16)
+do22cycle(11,13,12,14)
+do22cycle(2,26,23,6)
+do22cycle(3,27,24,7)
+do22cycle(0,25,20,10)
+do22cycle(1,29,22,9)
+do22cycle(4,28,21,8)
+do22cycle(16,18,17,19)
 
  draw(state)
 }
 
 function cw(){
- do4cycle(11,12,13,14)
- do4cycle(0,5,25,15)
- do4cycle(1,6,27,18)
- do4cycle(2,7,28,19)
- do4cycle(3,8,29,16)
- do4cycle(4,9,26,17)
+ do4cycle(6,7,8,9)
+ do4cycle(0,10,25,15)
+ do4cycle(1,11,27,18)
+ do4cycle(2,12,28,19)
+ do4cycle(3,13,29,16)
+ do4cycle(4,14,26,17)
  do4cycle(24,23,22,21)
  
-
  draw(state)
 }
 
 function ccw(){
- do4cycle(14,13,12,11)
- do4cycle(15,25,5,0)
- do4cycle(18,27,6,1)
- do4cycle(19,28,7,2)
- do4cycle(16,29,8,3)
- do4cycle(17,26,9,4)
- do4cycle(21,22,23,24)
+do4cycle(9,8,7,6)
+do4cycle(15,25,10,0)
+do4cycle(18,27,11,1)
+do4cycle(19,28,12,2)
+do4cycle(16,29,13,3)
+do4cycle(17,26,14,4)
+do4cycle(21,22,23,24)
+ 
  draw(state)
 }
 
 function cw2(){
- do22cycle(11,13,12,14)
- do22cycle(0,25,5,15)
- do22cycle(1,27,6,18)
- do22cycle(2,28,7,19)
- do22cycle(3,29,8,16)
- do22cycle(4,26,9,17)
- do22cycle(21,23,22,24)
+do22cycle(6,8,7,9)
+do22cycle(0,25,10,15)
+do22cycle(1,27,11,18)
+do22cycle(2,28,12,19)
+do22cycle(3,29,13,16)
+do22cycle(4,26,14,17)
+do22cycle(24,22,23,21)
 
  draw(state)
 }
 
 function left(){
- do4cycle(1,4,3,2)
- do4cycle(5,10,15,20)
- do4cycle(6,11,16,21) 
- do4cycle(7,12,17,22)
- do4cycle(8,13,18,23)
- do4cycle(9,14,19,24)
+ do4cycle(1,2,3,4)
+ do4cycle(5,15,20,10)
+ do4cycle(6,16,21,11) 
+ do4cycle(7,17,22,12)
+ do4cycle(8,18,23,13)
+ do4cycle(9,19,24,14)
  do4cycle(26,27,28,29)
 
  draw(state)
 }
 
 function right(){
- do4cycle(2,3,4,1)
- do4cycle(20,15,10,5)
- do4cycle(21,16,11,6) 
- do4cycle(22,17,12,7)
- do4cycle(23,18,13,8)
- do4cycle(24,19,14,9)
- do4cycle(25,28,27,26)
+do4cycle(4,3,2,1)
+do4cycle(10,20,15,5)
+do4cycle(11,21,16,6)
+do4cycle(12,22,17,7)
+do4cycle(13,23,18,8)
+do4cycle(14,24,19,9)
+do4cycle(29,28,27,26)
 
  draw(state)
 }
 
 function left2 (){
- do22cycle(1,3,4,2)
- do22cycle(5,15,10,20)
- do22cycle(6,16,11,21) 
- do22cycle(7,17,12,22)
- do22cycle(8,18,13,23)
- do22cycle(9,19,14,24)
- do22cycle(26,28,27,29)
+do22cycle(1,3,2,4)
+do22cycle(5,20,15,10)
+do22cycle(6,21,16,11)
+do22cycle(7,22,17,12)
+do22cycle(8,23,18,13)
+do22cycle(9,24,19,14)
+do22cycle(26,28,27,29)
 
  draw(state)
 }
