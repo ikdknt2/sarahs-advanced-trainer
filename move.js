@@ -165,4 +165,6 @@ do22cycle(9,24,19,14)
 do22cycle(26,28,27,29)
 
  draw(state)
+ 
+ log = log + "←2"
 }
