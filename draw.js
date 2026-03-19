@@ -11,25 +11,25 @@ const pieces = [
 
  {name:"UFL", pts:[[-50*SQRT3,50],[-25*SQRT3,25],[-25*SQRT3,75]], idx:4},
 
- {name:"R", pts:[[25*SQRT3,25],[50*SQRT3,0],[25*SQRT3,-75],[0,-50]], idx:5},
+ {name:"F", pts:[[-25*SQRT3,25],[0,-50],[-25*SQRT3,-75],[-50*SQRT3,0]], idx:5},
 
- {name:"RBU", pts:[[50*SQRT3,50],[50*SQRT3,0],[25*SQRT3,25]], idx:6},
+ {name:"FUR", pts:[[0,0],[-25*SQRT3,25],[0,-50]], idx:6},
 
- {name:"RBD", pts:[[50*SQRT3,-50],[50*SQRT3,0],[25*SQRT3,-75]], idx:7},
+ {name:"FDR", pts:[[0,-100],[-25*SQRT3,-75],[0,-50]], idx:7},
 
- {name:"RFD", pts:[[0,-100],[0,-50],[25*SQRT3,-75]], idx:8},
+ {name:"FDL", pts:[[-50*SQRT3,-50],[-25*SQRT3,-75],[-50*SQRT3,0]], idx:8},
 
- {name:"RFU", pts:[[0,0],[25*SQRT3,25],[0,-50]], idx:9},
+ {name:"FUL", pts:[[-50*SQRT3,50],[-25*SQRT3,25],[-50*SQRT3,0]], idx:9},
 
- {name:"F", pts:[[-25*SQRT3,25],[0,-50],[-25*SQRT3,-75],[-50*SQRT3,0]], idx:10},
+ {name:"R", pts:[[25*SQRT3,25],[50*SQRT3,0],[25*SQRT3,-75],[0,-50]], idx:10},
 
- {name:"FUR", pts:[[0,0],[-25*SQRT3,25],[0,-50]], idx:11},
+ {name:"RBU", pts:[[50*SQRT3,50],[50*SQRT3,0],[25*SQRT3,25]], idx:11},
 
- {name:"FDR", pts:[[0,-100],[-25*SQRT3,-75],[0,-50]], idx:12},
+ {name:"RBD", pts:[[50*SQRT3,-50],[50*SQRT3,0],[25*SQRT3,-75]], idx:12},
 
- {name:"FDL", pts:[[-50*SQRT3,-50],[-25*SQRT3,-75],[-50*SQRT3,0]], idx:13},
+ {name:"RFD", pts:[[0,-100],[0,-50],[25*SQRT3,-75]], idx:13},
 
- {name:"FUL", pts:[[-50*SQRT3,50],[-25*SQRT3,25],[-50*SQRT3,0]], idx:14},
+ {name:"RFU", pts:[[0,0],[25*SQRT3,25],[0,-50]], idx:14},
 ];
 
 
