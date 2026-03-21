@@ -63,5 +63,4 @@ function draw(state){
  pieces.forEach(p=>{
   poly(p.pts,state[p.idx],p.name,p.idx)
  }
- document.querySelector(".textbox").textContent = log
 }
