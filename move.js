@@ -1,4 +1,4 @@
-let log = ":"
+
 
 function do22cycle(a,b,c,d){ //a↔b c↔b
  let temp=state[a]
