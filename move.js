@@ -32,7 +32,7 @@ function sledge(){
   do3cycle(24,11,2)
   //centers
   do22cycle(0,25,10,5)
-  log = log + "S"
+  log = log + " S"
   draw(state)
 
   
@@ -46,7 +46,7 @@ function hedge(){
   do3cycle(2,11,24)
   //centers
   do22cycle(0,25,10,5)
-  log = log + "H"
+  log = log + " H"
   draw(state)
  
 }
@@ -59,7 +59,7 @@ function up(){
  do4cycle(1,22,29,9)
  do4cycle(4,21,28,8)
  do4cycle(16,17,18,19)
-log = log + "↑"
+log = log + " ↑"
  draw(state)
  
 }
@@ -72,7 +72,7 @@ do4cycle(5,25,20,0)
 do4cycle(9,29,22,1)
 do4cycle(8,28,21,4)
 do4cycle(19,18,17,16)
- log = log + "↓"
+ log = log + " ↓"
  draw(state)
  
 }
@@ -85,7 +85,7 @@ do22cycle(0,25,20,5)
 do22cycle(1,29,22,9)
 do22cycle(4,28,21,8)
 do22cycle(16,18,17,19)
-log = log + "↑2"
+log = log + " ↑2"
  draw(state)
  
 }
@@ -98,7 +98,7 @@ function cw(){
  do4cycle(3,13,29,16)
  do4cycle(4,14,26,17)
  do4cycle(24,23,22,21)
- log = log + "↷"
+ log = log + " ↷"
  draw(state)
  
 }
@@ -111,7 +111,7 @@ do4cycle(19,28,12,2)
 do4cycle(16,29,13,3)
 do4cycle(17,26,14,4)
 do4cycle(21,22,23,24)
- log = log + "↶"
+ log = log + " ↶"
  draw(state)
  
 }
@@ -124,7 +124,7 @@ do22cycle(2,28,12,19)
 do22cycle(3,29,13,16)
 do22cycle(4,26,14,17)
 do22cycle(24,22,23,21)
-log = log + "↷2"
+log = log + " ↷2"
  draw(state)
  
 }
@@ -137,7 +137,7 @@ function left(){
  do4cycle(8,18,23,13)
  do4cycle(9,19,24,14)
  do4cycle(26,27,28,29)
-log = log + "←"
+log = log + " ←"
  draw(state)
  
 }
@@ -150,7 +150,7 @@ do4cycle(12,22,17,7)
 do4cycle(13,23,18,8)
 do4cycle(14,24,19,9)
 do4cycle(29,28,27,26)
-log = log + "→"
+log = log + " →"
  draw(state)
  
 }
@@ -163,7 +163,7 @@ do22cycle(7,22,17,12)
 do22cycle(8,23,18,13)
 do22cycle(9,24,19,14)
 do22cycle(26,28,27,29)
-log = log + "←2"
+log = log + " ←2"
  draw(state)
  
  
