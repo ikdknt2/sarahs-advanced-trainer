@@ -82,4 +82,5 @@ function nextProblem(){
   state = [...picked.state]; // ←色配列コピー
 
   draw(state);
+  document.getElementById("text") = ":"
 }
