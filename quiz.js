@@ -154,7 +154,6 @@ function nextProblem(){
   const picked = problemList[i];
 
   state = applyColorNeutralMode(picked.state); // ←色配列コピー + Color Neutral Mode対応
-
+  log = picked.type + ":";
   draw(state);
-  document.getElementById("text") = ":"
-}
+  }
