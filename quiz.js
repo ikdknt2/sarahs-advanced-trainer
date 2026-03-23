@@ -48,7 +48,8 @@ function generateProblem(){
   if(document.getElementById("Pi3S").checked) selected.push("Pi3S");
   if(document.getElementById("PiHU").checked) selected.push("PiHU");
   if(document.getElementById("PiVU").checked) selected.push("PiVU");
-  if(document.getElementById("PiHZ").checked) selected.push("PiHZ");
+  if(document.getElementById("PiH").checked) selected.push("PiHZ");
+  if(document.getElementById("PiZ").checked) selected.push("PiHZ");
   if(document.getElementById("PiSk").checked) selected.push("PiSk");
   if(document.getElementById("PnS").checked) selected.push("PnS");
   if(document.getElementById("PnW").checked) selected.push("PnW");
@@ -58,7 +59,8 @@ function generateProblem(){
   if(document.getElementById("Pn3S").checked) selected.push("Pn3S");
   if(document.getElementById("PnHU").checked) selected.push("PnHU");
   if(document.getElementById("PnVU").checked) selected.push("PnVU");
-  if(document.getElementById("PnHZ").checked) selected.push("PnHZ");
+  if(document.getElementById("PnH").checked) selected.push("PnHZ");
+  if(document.getElementById("PnZ").checked) selected.push("PnHZ");
   if(document.getElementById("PnSk").checked) selected.push("PnSk");
 
 
