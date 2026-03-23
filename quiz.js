@@ -91,15 +91,53 @@ function applyColorNeutralMode(colors){
     return [...colors];
   }
 
-  const colorOrder = ["white", "green", "red", "orange", "blue", "yellow"];
-  const shift = Math.floor(Math.random() * 6) + 1; // 1〜6
+  const canonicalOrder = ["W", "G", "R", "Y", "B", "O"];
+  const front = ["W", "G", "R"];
+  const pairMap = {"W":"Y", "G":"B", "R":"O"};
+
+  // WGR を 1〜2 だけ循環シフト
+  const shift = Math.floor(Math.random() * 2) + 1;
+  const shiftedFront = front.map((_, i) => {
+    const src = (i - shift + front.length) % front.length;
+    return front[src];
+  });
+
+  // 対応色で後半を作成（W-Y, G-B, R-O）
+  const shiftedBack = shiftedFront.map(c => pairMap[c]);
+
+  // 前半・後半の入れ替えをランダム化
+  const arranged = Math.random() < 0.5
+    ? [...shiftedFront, ...shiftedBack]
+    : [...shiftedBack, ...shiftedFront];
+
+  const letterToColor = {
+    "W":"white",
+    "G":"green",
+    "R":"red",
+    "Y":"yellow",
+    "B":"blue",
+    "O":"orange"
+  };
+  const colorToLetter = {
+    "white":"W",
+    "green":"G",
+    "red":"R",
+    "yellow":"Y",
+    "blue":"B",
+    "orange":"O"
+  };
+
+  const remap = {};
+  canonicalOrder.forEach((src, i) => {
+    remap[src] = arranged[i];
+  });
 
   return colors.map(color => {
-    const i = colorOrder.indexOf(color);
-    if(i === -1) return color;
+    const srcLetter = colorToLetter[color];
+    if(!srcLetter) return color;
 
-    const shiftedIndex = (i + shift) % colorOrder.length;
-    return colorOrder[shiftedIndex];
+    const dstLetter = remap[srcLetter];
+    return letterToColor[dstLetter] || color;
   });
 }
 
