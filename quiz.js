@@ -153,7 +153,11 @@ function nextProblem(){
   const i = Math.floor(Math.random() * problemList.length);
   const picked = problemList[i];
 
+  const caseLabel = picked.type.length > 2
+  picked.type.slice(0, 2) + "+" + picked.type.slice(2)
+  picked.type;
+
   state = applyColorNeutralMode(picked.state); // ←色配列コピー + Color Neutral Mode対応
-  log = picked.type + ":";
+   log = caseLabel + ":";
   draw(state);
   }
