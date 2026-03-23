@@ -138,6 +138,13 @@ body{
   display: flex;
   align-items: center;
   box-sizing: border-box;
+  gap:10px;
+  cursor:pointer;
+}
+
+.toggle label span{
+  margin-left:10px;
+  white-space:nowrap;
 }
 .toggle label:before {
   content: '';
