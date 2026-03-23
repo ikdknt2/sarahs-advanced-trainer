@@ -90,3 +90,13 @@ body{
  margin: 0 auto;
 }
 
+.case-actions{
+ justify-content:flex-end;
+ gap:8px;
+ width:100%;
+}
+
+.case-actions button{
+ flex:0 0 auto;
+ min-width:90px;
+}
