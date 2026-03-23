@@ -115,7 +115,7 @@ function nextProblem(){
   const i = Math.floor(Math.random() * problemList.length);
   const picked = problemList[i];
 
-  state = [...picked.state]; // ←色配列コピー
+  state = applyColorNeutralMode(picked.state); // ←色配列コピー + Color Neutral Mode対応
 
   draw(state);
   document.getElementById("text") = ":"
