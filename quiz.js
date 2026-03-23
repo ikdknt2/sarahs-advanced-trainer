@@ -68,6 +68,24 @@ function generateProblem(){
 }
 
 // =====================
+// チェックボックス一括ON/OFF
+// =====================
+function setAllCaseCheckboxes(checked){
+  const caseCheckboxes = document.querySelectorAll('.right input[type="checkbox"]');
+  caseCheckboxes.forEach(box => {
+    box.checked = checked;
+  });
+}
+
+function allOn(){
+  setAllCaseCheckboxes(true);
+}
+
+function allOff(){
+  setAllCaseCheckboxes(false);
+}
+
+// =====================
 // 次の問題
 // =====================
 function nextProblem(){
