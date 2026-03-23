@@ -50,6 +50,17 @@ body{
  cursor:pointer;
 }
 
+.case-actions{
+ justify-content:flex-end;
+ gap:8px;
+ width:100%;
+}
+
+.case-actions button{
+ flex:0 0 auto;
+ min-width:90px;
+}
+
 .card{
   background:#ffffff;
   padding:20px;
@@ -89,4 +100,3 @@ body{
  align-items:center;
  margin: 0 auto;
 }
-
