@@ -71,7 +71,7 @@ function generateProblem(){
 // チェックボックス一括ON/OFF
 // =====================
 function setAllCaseCheckboxes(checked){
-  const caseCheckboxes = document.querySelectorAll('.right input[type="checkbox"]');
+  const caseCheckboxes = document.querySelectorAll('input[type="checkbox"][id^="Pi"], input[type="checkbox"][id^="Pn"]');
   caseCheckboxes.forEach(box => {
     box.checked = checked;
   });
@@ -83,6 +83,24 @@ function allOn(){
 
 function allOff(){
   setAllCaseCheckboxes(false);
+}
+
+function applyColorNeutralMode(colors){
+  const colorNeutralMode = document.getElementById("colorNeutralMode");
+  if(!colorNeutralMode || !colorNeutralMode.checked){
+    return [...colors];
+  }
+
+  const colorOrder = ["white", "green", "red", "orange", "blue", "yellow"];
+  const shift = Math.floor(Math.random() * 6) + 1; // 1〜6
+
+  return colors.map(color => {
+    const i = colorOrder.indexOf(color);
+    if(i === -1) return color;
+
+    const shiftedIndex = (i + shift) % colorOrder.length;
+    return colorOrder[shiftedIndex];
+  });
 }
 
 // =====================
