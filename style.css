@@ -50,6 +50,23 @@ body{
  cursor:pointer;
 }
 
+.case-actions{
+ justify-content:flex-start;
+ gap:8px;
+ width:100%;
+}
+
+.case-actions button{
+ flex:0 0 auto;
+ min-width:90px;
+}
+
+.mode-toggle{
+ display:block;
+ margin:10px 0 14px;
+ font-weight:bold;
+}
+
 .card{
   background:#ffffff;
   padding:20px;
