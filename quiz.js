@@ -148,7 +148,7 @@ function applyColorNeutralMode(colors){
 // =====================
 function nextProblem(){
   if(problemList.length === 0){
-    alert("問題がありません");
+    alert("You have to choose cases");
     return;
   }
 
