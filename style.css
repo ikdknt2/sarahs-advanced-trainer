@@ -62,8 +62,9 @@ body{
 }
 
 .mode-toggle{
- display:block;
- margin:10px 0 14px;
+ display:flex;
+ align-items:center;
+ margin:0 0 0 10px;
  font-weight:bold;
 }
 
@@ -137,6 +138,13 @@ body{
   display: flex;
   align-items: center;
   box-sizing: border-box;
+  gap:10px;
+  cursor:pointer;
+}
+
+.toggle label span{
+  margin-left:10px;
+  white-space:nowrap;
 }
 .toggle label:before {
   content: '';
