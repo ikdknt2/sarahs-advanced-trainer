@@ -32,6 +32,10 @@ body{
  color:Black;
  align-items:center;
  font-weight: bold; 
+ line-height: 1.4;
+ letter-spacing: 0.02em;
+ font-kerning: none;
+ font-variant-ligatures: none;
  padding:10px;
  box-sizing:border-box;
 }
