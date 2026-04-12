@@ -39,29 +39,33 @@ async function loadCSV(){
 // =====================
 function generateProblem(){
   const selected = [];
+  const isChecked = (id) => {
+    const element = document.getElementById(id);
+    return Boolean(element && element.checked);
+  };
 
-  if(document.getElementById("PiS").checked) selected.push("PiS");
-  if(document.getElementById("PiW").checked) selected.push("PiW");
-  if(document.getElementById("PiX").checked) selected.push("PiX");
-  if(document.getElementById("PiO").checked) selected.push("PiO");
-  if(document.getElementById("PiZC").checked) selected.push("PiZC");
-  if(document.getElementById("Pi3S").checked) selected.push("Pi3S");
-  if(document.getElementById("PiHU").checked) selected.push("PiHU");
-  if(document.getElementById("PiVU").checked) selected.push("PiVU");
-  if(document.getElementById("PiH").checked) selected.push("PiHZ");
-  if(document.getElementById("PiZ").checked) selected.push("PiHZ");
-  if(document.getElementById("PiSk").checked) selected.push("PiSk");
-  if(document.getElementById("PnS").checked) selected.push("PnS");
-  if(document.getElementById("PnW").checked) selected.push("PnW");
-  if(document.getElementById("PnX").checked) selected.push("PnX");
-  if(document.getElementById("PnO").checked) selected.push("PnO");
-  if(document.getElementById("PnZC").checked) selected.push("PnZC");
-  if(document.getElementById("Pn3S").checked) selected.push("Pn3S");
-  if(document.getElementById("PnHU").checked) selected.push("PnHU");
-  if(document.getElementById("PnVU").checked) selected.push("PnVU");
-  if(document.getElementById("PnH").checked) selected.push("PnHZ");
-  if(document.getElementById("PnZ").checked) selected.push("PnHZ");
-  if(document.getElementById("PnSk").checked) selected.push("PnSk");
+  if(isChecked("PiS")) selected.push("PiS");
+  if(isChecked("PiW")) selected.push("PiW");
+  if(isChecked("PiX")) selected.push("PiX");
+  if(isChecked("PiO")) selected.push("PiO");
+  if(isChecked("PiZC")) selected.push("PiZC");
+  if(isChecked("Pi3S")) selected.push("Pi3S");
+  if(isChecked("PiHU")) selected.push("PiHU");
+  if(isChecked("PiVU")) selected.push("PiVU");
+  if(isChecked("PiH")) selected.push("PiHZ");
+  if(isChecked("PiZ")) selected.push("PiHZ");
+  if(isChecked("PiSk")) selected.push("PiSk");
+  if(isChecked("PnS")) selected.push("PnS");
+  if(isChecked("PnW")) selected.push("PnW");
+  if(isChecked("PnX")) selected.push("PnX");
+  if(isChecked("PnO")) selected.push("PnO");
+  if(isChecked("PnZC")) selected.push("PnZC");
+  if(isChecked("Pn3S")) selected.push("Pn3S");
+  if(isChecked("PnHU")) selected.push("PnHU");
+  if(isChecked("PnVU")) selected.push("PnVU");
+  if(isChecked("PnH")) selected.push("PnHZ");
+  if(isChecked("PnZ")) selected.push("PnHZ");
+  if(isChecked("PnSk")) selected.push("PnSk");
 
 
   problemList = allCases.filter(c => selected.includes(c.type));
@@ -156,10 +160,11 @@ function nextProblem(){
   const picked = problemList[i];
 
   const caseLabel = picked.type.length > 2
-  picked.type.slice(0, 2) + "+" + picked.type.slice(2)
-  picked.type;
+    ? picked.type.slice(0, 2) + "+" + picked.type.slice(2)
+    : picked.type;
 
   state = applyColorNeutralMode(picked.state); // ←色配列コピー + Color Neutral Mode対応
-   log = caseLabel + ":";
+  log = caseLabel + ":";
+  document.getElementById("text").textContent = log;
   draw(state);
-  }
+}
